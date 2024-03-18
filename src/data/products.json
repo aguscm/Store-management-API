@@ -1,30 +1,30 @@
 [
     {
-        "id": "001",
+        "id": 1,
         "name": "Massages",
         "description": "Full-body relaxing massage",
         "price": 50
     },
     {
-        "id": "002",
+        "id": 2,
         "name": "UV Tanning",
         "description": "UV tanning session",
         "price": 30
     },
     {
-        "id": "003",
+        "id": 3,
         "name": "Manicure",
         "description": "Hand care and nail polish",
         "price": 25
     },
     {
-        "id": "004",
+        "id": 4,
         "name": "Thermal Bath",
         "description": "Immerse yourself in our thermal bath",
         "price": 40
     },
     {
-        "id": "005",
+        "id": 5,
         "name": "Pedicure",
         "description": "Foot care and nail polish",
         "price": 35

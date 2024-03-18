@@ -1,19 +1,19 @@
 export interface IProduct {
-  id: string;
+  id: number;
   name: string;
   description: string;
   price: number;
 }
 export interface IClient {
-  id: string;
+  id: number;
   name: string;
   surname: string;
 }
 export interface IInvoice {
-  id: string;
+  id: number;
   idProduct: string;
   idClient: string;
   discount: number;
-  invoiceDate: Date;
+  date: Date;
   comment?: string;
 }
