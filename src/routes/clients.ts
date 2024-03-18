@@ -1,10 +1,10 @@
 import express from 'express'
-import type { IProduct } from "../interfaces";
+import type { IClient } from "../interfaces";
 const allClients = require("../data/clients.json")
 
 const router = express.Router()
 
-let clientList: IProduct[] = allClients
+let clientList: IClient[] = allClients
 
 router
     .route("/")
