@@ -1,5 +1,6 @@
 import express from "express";
 import type { IInvoice } from "../interfaces";
+import requireLogin from "../middlewares/requireLogin";
 const allInvoices = require("../data/invoices.json");
 
 const router = express.Router();
@@ -11,7 +12,7 @@ const getNextNumberInvoiceId = (): number => {
 
 router
   .route("/")
-  .post(function (req, res) {
+  .post(requireLogin, function (req, res) {
     const { idProduct, idClient, discount, date, comment } = req.body;
     let response: Object;
     if (!idProduct || !idClient || !date) {
@@ -39,7 +40,7 @@ router
     }
     res.send(response);
   })
-  .put(function (req, res) {
+  .put(requireLogin, function (req, res) {
     const { id, idClient, idProduct, discount, date, comment } = req.body;
     let response: Object;
     if (!id) {

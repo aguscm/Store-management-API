@@ -17,3 +17,16 @@ export interface IInvoice {
   date: Date;
   comment?: string;
 }
+export interface IUser {
+  tokenId: string;
+  name: string;
+  lastName: string;
+  email: string;
+  password: string;
+}
+export interface IResponse {
+  error: boolean;
+  code: number;
+  message?: string;
+  data?: Object;
+}
