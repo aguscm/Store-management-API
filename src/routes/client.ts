@@ -1,5 +1,5 @@
 import express from "express";
-import type { IInvoice } from "../interfaces";
+import type { IInvoice, IResponse } from "../interfaces";
 import requireLogin from "../middlewares/requireLogin";
 const allInvoices = require("../data/invoices.json");
 
@@ -9,9 +9,9 @@ let invoiceList: IInvoice[] = allInvoices;
 
 router.route("/:clientID/invoices").get(requireLogin, function (req, res) {
   const clientID = req.params.clientID;
-  // if (req.headers.authorization === loginUser.tokenId) {
+  let response: IResponse;
   if (!clientID) {
-    let response = {
+    response = {
       error: true,
       code: 400,
       message: "Client ID is required",
@@ -21,28 +21,21 @@ router.route("/:clientID/invoices").get(requireLogin, function (req, res) {
       (invoice) => invoice.idClient === clientID
     );
     if (invoices.length > 0) {
-      let response = {
+      response = {
         error: false,
         code: 200,
         message: `Invoices from client ${clientID}`,
         data: invoices,
       };
-      res.send(response);
     } else {
-      let response = {
+      response = {
         error: true,
         code: 404,
-        message: "Pokemon not found",
+        message: "Client not found",
       };
     }
   }
-  // } else {
-  //   response = {
-  //     error: true,
-  //     code: 401,
-  //     message: "Unauthorized",
-  //   };
-  // }
+  res.send(response);
 });
 
 module.exports = router;
