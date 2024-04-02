@@ -3,6 +3,7 @@ export interface IProduct {
   name: string;
   description: string;
   price: number;
+  imagePath: string;
 }
 export interface IClient {
   id: number;
