@@ -9,6 +9,9 @@ export interface IClient {
   id: number;
   name: string;
   surname: string;
+  email: string;
+  phone?: string;
+  registration_date: Date;
 }
 export interface IInvoice {
   id: number;
