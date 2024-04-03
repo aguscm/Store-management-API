@@ -3,7 +3,7 @@
         "id": 1,
         "idProduct": 2,
         "idClient": 5,
-        "discount": 0,
+        "discount": 10,
         "invoiceDate": "2022-07-15",
         "comment": "Great service"
     },
@@ -270,5 +270,121 @@
         "discount": 0,
         "invoiceDate": "2024-02-03",
         "comment": ""
+    },
+    {
+        "id": 36,
+        "idProduct": 1,
+        "idClient": 22,
+        "discount": 10,
+        "invoiceDate": "2022-07-01"
+    },
+    {
+        "id": 37,
+        "idProduct": 3,
+        "idClient": 29,
+        "discount": 10,
+        "invoiceDate": "2023-02-14",
+        "comment": "Great service"
+    },
+    {
+        "id": 38,
+        "idProduct": 5,
+        "idClient": 36,
+        "discount": 5,
+        "invoiceDate": "2023-09-27",
+        "comment": "Satisfied customer"
+    },
+    {
+        "id": 39,
+        "idProduct": 2,
+        "idClient": 43,
+        "discount": 15,
+        "invoiceDate": "2024-01-10",
+        "comment": "Relaxing experience"
+    },
+    {
+        "id": 40,
+        "idProduct": 4,
+        "idClient": 40,
+        "discount": 15,
+        "invoiceDate": "2024-03-06",
+        "comment": "Excellent massage"
+    },
+    {
+        "id": 41,
+        "idProduct": 3,
+        "idClient": 34,
+        "discount": 0,
+        "invoiceDate": "2022-11-15",
+        "comment": "Very professional staff"
+    },
+    {
+        "id": 42,
+        "idProduct": 1,
+        "idClient": 23,
+        "discount": 0,
+        "invoiceDate": "2023-04-07",
+        "comment": "Friendly atmosphere"
+    },
+    {
+        "id": 43,
+        "idProduct": 5,
+        "idClient": 25,
+        "discount": 20,
+        "invoiceDate": "2023-06-25",
+        "comment": "Quick and efficient service"
+    },
+    {
+        "id": 44,
+        "idProduct": 1,
+        "idClient": 32,
+        "discount": 10,
+        "invoiceDate": "2023-10-01",
+        "comment": "Highly recommended"
+    },
+    {
+        "id": 45,
+        "idProduct": 4,
+        "idClient": 39,
+        "discount": 0,
+        "invoiceDate": "2023-12-14",
+        "comment": "Fantastic experience"
+    },
+    {
+        "id": 46,
+        "idProduct": 2,
+        "idClient": 28,
+        "discount": 0,
+        "invoiceDate": "2024-02-18",
+        "comment": "Great value for money"
+    },
+    {
+        "id": 47,
+        "idProduct": 3,
+        "idClient": 21,
+        "discount": 20,
+        "invoiceDate": "2024-05-13"
+    },
+    {
+        "id": 48,
+        "idProduct": 5,
+        "idClient": 19,
+        "discount": 0,
+        "invoiceDate": "2022-12-10",
+        "comment": "Wonderful experience"
+    },
+    {
+        "id": 49,
+        "idProduct": 1,
+        "idClient": 26,
+        "discount": 100,
+        "invoiceDate": "2023-07-15"
+    },
+    {
+        "id": 50,
+        "idProduct": 4,
+        "idClient": 33,
+        "discount": 13,
+        "invoiceDate": "2024-04-24"
     }
 ]
