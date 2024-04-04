@@ -7,7 +7,7 @@ import type { IResponse } from "../interfaces";
 // Helpers
 import { loginUser } from "../helpers/user";
 
-router.route("/").get(function (req, res) {
+router.route("/").post(function (req, res) {
   let response: IResponse;
   if (
     req.body.email === loginUser.email &&
