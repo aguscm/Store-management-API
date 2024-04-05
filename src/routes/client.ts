@@ -35,7 +35,7 @@ router.route("/:clientID/invoices").get(requireLogin, function (req, res) {
       };
     }
   }
-  res.send(response);
+  res.status(response.code).send(response);;
 });
 
 module.exports = router;

@@ -15,7 +15,7 @@ router
             data: productList,
         };
 
-        res.send(response);
+        res.status(response.code).send(response);;
     });
 
 module.exports = router

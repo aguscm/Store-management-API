@@ -16,7 +16,7 @@ const requireLogin = (
       code: 401,
       message: "Unauthorized",
     };
-    res.send(response);
+    res.status(response.code).send(response);;
   }
 };
 

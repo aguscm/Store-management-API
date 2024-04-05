@@ -31,7 +31,7 @@ router.route("/").post(function (req, res) {
       message: "Login failed",
     };
   }
-  res.send(response);
+  res.status(response.code).send(response);;
 });
 
 module.exports = router;

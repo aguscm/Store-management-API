@@ -1,5 +1,5 @@
 import express from "express";
-import type { IInvoice } from "../interfaces";
+import type { IInvoice, IResponse } from "../interfaces";
 import requireLogin from "../middlewares/requireLogin";
 const allInvoices = require("../data/invoices.json");
 
@@ -36,12 +36,12 @@ router.route("/").post(requireLogin, function (req, res) {
       data: newInvoice,
     };
   }
-  res.send(response);
+  res.status(response.code).send(response);;
 });
 
 router.route("/:invoiceID").put(requireLogin, function (req, res) {
   const { idClient, idProduct, discount, date, comment } = req.body;
-  let response: Object;
+  let response: IResponse;
   const invoiceID = Number(req.params.invoiceID);
   if (invoiceID) {
     response = {
@@ -73,7 +73,7 @@ router.route("/:invoiceID").put(requireLogin, function (req, res) {
       };
     }
   }
-  res.send(response);
+  res.status(response.code).send(response);
 });
 
 module.exports = router;

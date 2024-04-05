@@ -27,7 +27,7 @@ app.get("/", function (req, res) {
     code: 200,
     message: "API REST working. You can use /login or any available endpoint.",
   };
-  res.send(response);
+  res.status(response.code).send(response);;
 });
 
 // Routes

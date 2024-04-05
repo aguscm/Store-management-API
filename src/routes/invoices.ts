@@ -14,7 +14,7 @@ router.route("/").get(requireLogin, function (req, res) {
     data: invoiceList,
   };
 
-  res.send(response);
+  res.status(response.code).send(response);;
 });
 
 module.exports = router;
