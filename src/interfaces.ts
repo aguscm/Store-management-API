@@ -13,10 +13,19 @@ export interface IClient {
   phone?: string;
   registration_date: Date;
 }
+export interface IInvoiceShort {
+  id: number;
+  idProduct: number;
+  idClient: number;
+  discount: number;
+  date: Date;
+  comment?: string;
+}
+
 export interface IInvoice {
   id: number;
-  idProduct: string;
-  idClient: string;
+  product: IProduct;
+  client: IClient;
   discount: number;
   date: Date;
   comment?: string;
