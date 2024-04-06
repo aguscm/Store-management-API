@@ -1,17 +1,14 @@
 import express from "express";
-import type { IClient } from "../interfaces";
 import requireLogin from "../middlewares/requireLogin";
-const allClients = require("../data/clients.json");
+import data from "../data/data";
 
 const router = express.Router();
-
-let clientList: IClient[] = allClients;
 
 router.route("/").get(requireLogin, function (req, res) {
   let response = {
     error: false,
     code: 200,
-    data: clientList,
+    data: data.getClients(),
   };
 
   res.status(response.code).send(response);;

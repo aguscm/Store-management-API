@@ -1,17 +1,12 @@
 import express from "express";
-import type { IInvoice, IInvoiceShort, IResponse } from "../interfaces";
+import type { IInvoiceShort, IResponse } from "../interfaces";
 import requireLogin from "../middlewares/requireLogin";
-const allInvoices = require("../data/invoices.json");
+import data  from "../data/data";
 
 const router = express.Router();
 
-let invoiceList: IInvoiceShort[] = allInvoices;
-console.log(invoiceList)
-const getNextNumberInvoiceId = (): number => {
-  return allInvoices[allInvoices.length - 1].id++;
-};
 
-router.route("/").post(requireLogin, function (req, res) {
+router.route("/").post( function (req, res) {
   const { idProduct, idClient, discount, date, comment } = req.body;
   let response: IResponse;
   if (!idProduct || !idClient || !date) {
@@ -22,14 +17,14 @@ router.route("/").post(requireLogin, function (req, res) {
     };
   } else {
     const newInvoice: IInvoiceShort = {
-      id: getNextNumberInvoiceId(),
+      id: null,
       idClient: idClient,
       idProduct: idProduct,
       discount: discount || 0,
       date: date,
       comment: comment || "",
     };
-    invoiceList.push(newInvoice);
+    data.addInvoice(newInvoice);
     response = {
       error: false,
       code: 200,
@@ -40,7 +35,7 @@ router.route("/").post(requireLogin, function (req, res) {
   res.status(response.code).send(response);;
 });
 
-router.route("/:invoiceID").put(function (req, res) {
+router.route("/:invoiceID").put( function (req, res) {
   const { idClient, idProduct, discount, date, comment } = req.body;
   let response: IResponse;
   const invoiceID = Number(req.params.invoiceID);
@@ -51,10 +46,7 @@ router.route("/:invoiceID").put(function (req, res) {
       message: "ID field is required",
     };
   } else {
-    let invoiceToEdit : IInvoiceShort = invoiceList.find(
-      (invoice) => (invoice.id === invoiceID)
-    );
-    
+    const invoiceToEdit = data.findInvoiceById(invoiceID);
     if (!invoiceToEdit) {
       response = {
         error: true,
@@ -67,14 +59,42 @@ router.route("/:invoiceID").put(function (req, res) {
       invoiceToEdit.discount = discount || invoiceToEdit.discount;
       invoiceToEdit.date = date || invoiceToEdit.date;
       invoiceToEdit.comment = comment || invoiceToEdit.comment;
+      data.updateInvoice(invoiceID, invoiceToEdit);
       response = {
         error: false,
         code: 200,
         message: "Invoice updated",
         data: invoiceToEdit,
       };
+    }
+  }
+  res.status(response.code).send(response);
+});
 
-      
+router.route("/:invoiceID").delete( function (req, res) {
+let response: IResponse;
+  const invoiceID = Number(req.params.invoiceID);
+  if (!invoiceID) {
+    response = {
+      error: true,
+      code: 400,
+      message: "ID field is required",
+    };
+  } else {
+    const invoiceToDelete = data.findInvoiceById(invoiceID);
+    if (!invoiceToDelete) {
+      response = {
+        error: true,
+        code: 400,
+        message: "Invoice not found",
+      };
+    } else {
+      data.removeInvoice(invoiceID);
+      response = {
+        error: false,
+        code: 200,
+        message: "Invoice deleted",
+      };
     }
   }
   res.status(response.code).send(response);

@@ -1,11 +1,9 @@
 import express from "express";
 import type { IInvoice, IResponse } from "../interfaces";
 import requireLogin from "../middlewares/requireLogin";
-const allInvoices = require("../data/invoices.json");
+import data from "../data/data";
 
 const router = express.Router();
-
-let invoiceList: IInvoice[] = allInvoices;
 
 router.route("/:clientID/invoices").get(requireLogin, function (req, res) {
   const clientID = req.params.clientID;
@@ -17,10 +15,8 @@ router.route("/:clientID/invoices").get(requireLogin, function (req, res) {
       message: "Client ID is required",
     };
   } else {
-    let invoices: IInvoice[] = invoiceList.filter(
-      (invoice) => invoice.idClient === clientID
-    );
-    if (invoices.length > 0) {
+    let invoices: IInvoice[] = data.getInvoicesFromClient(Number(clientID));
+    if (invoices?.length > 0) {
       response = {
         error: false,
         code: 200,

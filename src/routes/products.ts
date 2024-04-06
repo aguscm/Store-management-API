@@ -1,10 +1,7 @@
 import express from 'express'
-import type { IProduct } from "../interfaces";
-const allProducts = require("../data/products.json")
+import data from "../data/data";
 
 const router = express.Router()
-
-let productList: IProduct[] = allProducts
 
 router
     .route("/")
@@ -12,7 +9,7 @@ router
         let response = {
             error: false,
             code: 200,
-            data: productList,
+            data: data.getProducts(),
         };
 
         res.status(response.code).send(response);;
