@@ -11,17 +11,20 @@ let invoiceList: IInvoiceShort[] = allInvoices;
 let productList: IProduct[] = allProducts;
 let clientList: IClient[] = allClients;
 let invoiceFullList: IInvoice[] = invoiceList.map((invoice: IInvoiceShort) => {
-    const product = productList.find((p: IProduct) => p.id === invoice.idProduct);
-    const client = clientList.find((c: IClient) => c.id === invoice.idClient);
+  const product = productList.find((p: IProduct) => p.id === invoice.idProduct);
+  const client = clientList.find((c: IClient) => c.id === invoice.idClient);
 
-    delete invoice.idProduct;
-    delete invoice.idClient;
+  // Create a deep copy of the invoice object
+  const invoiceCopy = JSON.parse(JSON.stringify(invoice));
 
-    return {
-      ...invoice,
-      product,
-      client,
-    };
+  delete invoiceCopy.idProduct;
+  delete invoiceCopy.idClient;
+
+  return {
+    ...invoiceCopy,
+    product,
+    client,
+  };
 });
 router.route("/").get(requireLogin, function (req, res) {
   let response: IResponse;

@@ -1,18 +1,19 @@
 import express from "express";
-import type { IInvoice, IResponse } from "../interfaces";
+import type { IInvoice, IInvoiceShort, IResponse } from "../interfaces";
 import requireLogin from "../middlewares/requireLogin";
 const allInvoices = require("../data/invoices.json");
 
 const router = express.Router();
 
-let invoiceList: IInvoice[] = allInvoices;
+let invoiceList: IInvoiceShort[] = allInvoices;
+console.log(invoiceList)
 const getNextNumberInvoiceId = (): number => {
   return allInvoices[allInvoices.length - 1].id++;
 };
 
 router.route("/").post(requireLogin, function (req, res) {
   const { idProduct, idClient, discount, date, comment } = req.body;
-  let response: Object;
+  let response: IResponse;
   if (!idProduct || !idClient || !date) {
     response = {
       error: true,
@@ -20,7 +21,7 @@ router.route("/").post(requireLogin, function (req, res) {
       message: "Product ID, Client ID and Date fields are required",
     };
   } else {
-    const newInvoice: IInvoice = {
+    const newInvoice: IInvoiceShort = {
       id: getNextNumberInvoiceId(),
       idClient: idClient,
       idProduct: idProduct,
@@ -39,20 +40,21 @@ router.route("/").post(requireLogin, function (req, res) {
   res.status(response.code).send(response);;
 });
 
-router.route("/:invoiceID").put(requireLogin, function (req, res) {
+router.route("/:invoiceID").put(function (req, res) {
   const { idClient, idProduct, discount, date, comment } = req.body;
   let response: IResponse;
   const invoiceID = Number(req.params.invoiceID);
-  if (invoiceID) {
+  if (!invoiceID) {
     response = {
       error: true,
       code: 400,
       message: "ID field is required",
     };
   } else {
-    const invoiceToEdit = allInvoices.find(
-      (invoice: IInvoice) => (invoice.id = invoiceID)
+    let invoiceToEdit : IInvoiceShort = invoiceList.find(
+      (invoice) => (invoice.id === invoiceID)
     );
+    
     if (!invoiceToEdit) {
       response = {
         error: true,
@@ -71,6 +73,8 @@ router.route("/:invoiceID").put(requireLogin, function (req, res) {
         message: "Invoice updated",
         data: invoiceToEdit,
       };
+
+      
     }
   }
   res.status(response.code).send(response);
