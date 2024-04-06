@@ -6,7 +6,7 @@ import data  from "../data/data";
 const router = express.Router();
 
 
-router.route("/").post( function (req, res) {
+router.route("/").post(requireLogin, function (req, res) {
   const { idProduct, idClient, discount, date, comment } = req.body;
   let response: IResponse;
   if (!idProduct || !idClient || !date) {
@@ -35,7 +35,7 @@ router.route("/").post( function (req, res) {
   res.status(response.code).send(response);;
 });
 
-router.route("/:invoiceID").put( function (req, res) {
+router.route("/:invoiceID").put(requireLogin, function (req, res) {
   const { idClient, idProduct, discount, date, comment } = req.body;
   let response: IResponse;
   const invoiceID = Number(req.params.invoiceID);
@@ -71,7 +71,7 @@ router.route("/:invoiceID").put( function (req, res) {
   res.status(response.code).send(response);
 });
 
-router.route("/:invoiceID").delete( function (req, res) {
+router.route("/:invoiceID").delete(requireLogin, function (req, res) {
 let response: IResponse;
   const invoiceID = Number(req.params.invoiceID);
   if (!invoiceID) {

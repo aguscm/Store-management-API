@@ -5,7 +5,7 @@ import data from "../data/data";
 
 const router = express.Router();
 
-router.route("/").get(function (req, res) {
+router.route("/").get(requireLogin, function (req, res) {
   let response: IResponse;
   response = {
     error: false,
