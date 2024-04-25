@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Massages",
+        "description": "Indulge in a rejuvenating full-body relaxing massage that will leave you feeling refreshed and revitalized. Our skilled therapists will melt away your stress and tension, providing the ultimate pampering experience.",
+        "price": 50,
+        "imagePath": "https://cdn.pixabay.com/photo/2014/12/13/18/27/woman-567021_1280.jpg"
+    },
+    {
+        "id": 2,
+        "name": "UV Tanning",
+        "description": "Achieve a sun-kissed glow with our state-of-the-art UV tanning sessions. Step into our premium tanning beds and let the warm rays envelop your skin, giving you a natural and radiant tan.",
+        "price": 30,
+        "imagePath": "https://cdn.pixabay.com/photo/2013/07/18/21/32/tanning-bed-165167_1280.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Manicure",
+        "description": "Experience the epitome of hand care and nail perfection with our luxurious manicure services. Our skilled technicians will shape, buff, and polish your nails to perfection, leaving your hands looking and feeling beautiful.",
+        "price": 25,
+        "imagePath": "https://cdn.pixabay.com/photo/2017/08/06/00/41/people-2587157_1280.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Thermal Bath",
+        "description": "Immerse yourself in pure bliss with our invigorating thermal bath experience. Let the soothing warm waters envelop your body, melting away muscle tension and promoting relaxation and well-being.",
+        "price": 40,
+        "imagePath": "https://cdn.pixabay.com/photo/2018/11/12/08/36/pool-3810389_1280.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Pedicure",
+        "description": "Treat your feet to the ultimate pampering with our luxurious pedicure services. Our expert technicians will exfoliate, moisturize, and beautify your feet, leaving them feeling soft, smooth, and ready to show off.",
+        "price": 35,
+        "imagePath": "https://cdn.pixabay.com/photo/2020/03/24/18/17/feet-4964998_1280.jpg"
+    }
+]

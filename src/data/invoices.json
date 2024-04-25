@@ -1,0 +1,390 @@
+[
+    {
+        "id": 1,
+        "idProduct": 2,
+        "idClient": 5,
+        "discount": 10,
+        "date": "2022-07-15",
+        "comment": "Great service"
+    },
+    {
+        "id": 2,
+        "idProduct": 3,
+        "idClient": 12,
+        "discount": 10,
+        "date": "2023-02-28",
+        "comment": "Satisfied customer"
+    },
+    {
+        "id": 3,
+        "idProduct": 5,
+        "idClient": 9,
+        "discount": 5,
+        "date": "2023-09-10",
+        "comment": "Relaxing experience"
+    },
+    {
+        "id": 4,
+        "idProduct": 1,
+        "idClient": 17,
+        "discount": 0,
+        "date": "2024-01-05",
+        "comment": "Excellent massage"
+    },
+    {
+        "id": 5,
+        "idProduct": 4,
+        "idClient": 14,
+        "discount": 15,
+        "date": "2024-03-01",
+        "comment": "Very professional staff"
+    },
+    {
+        "id": 6,
+        "idProduct": 3,
+        "idClient": 8,
+        "discount": 0,
+        "date": "2022-11-20",
+        "comment": "Friendly atmosphere"
+    },
+    {
+        "id": 7,
+        "idProduct": 2,
+        "idClient": 10,
+        "discount": 0,
+        "date": "2023-04-12",
+        "comment": "Quick and efficient service"
+    },
+    {
+        "id": 8,
+        "idProduct": 4,
+        "idClient": 13,
+        "discount": 20,
+        "date": "2023-06-30",
+        "comment": "Highly recommended"
+    },
+    {
+        "id": 9,
+        "idProduct": 1,
+        "idClient": 16,
+        "discount": 0,
+        "date": "2023-10-05",
+        "comment": "Fantastic experience"
+    },
+    {
+        "id": 10,
+        "idProduct": 5,
+        "idClient": 11,
+        "discount": 0,
+        "date": "2023-12-18",
+        "comment": "Great value for money"
+    },
+    {
+        "id": 11,
+        "idProduct": 1,
+        "idClient": 2,
+        "discount": 0,
+        "date": "2024-02-22"
+    },
+    {
+        "id": 12,
+        "idProduct": 3,
+        "idClient": 7,
+        "discount": 10,
+        "date": "2024-05-15",
+        "comment": "Pleased with the service"
+    },
+    {
+        "id": 13,
+        "idProduct": 5,
+        "idClient": 4,
+        "discount": 5,
+        "date": "2024-07-08"
+    },
+    {
+        "id": 14,
+        "idProduct": 4,
+        "idClient": 1,
+        "discount": 0,
+        "date": "2024-09-20"
+    },
+    {
+        "id": 15,
+        "idProduct": 2,
+        "idClient": 18,
+        "discount": 0,
+        "date": "2024-12-03"
+    },
+    {
+        "id": 16,
+        "idProduct": 3,
+        "idClient": 12,
+        "discount": 0,
+        "date": "2023-08-10"
+    },
+    {
+        "id": 17,
+        "idProduct": 5,
+        "idClient": 16,
+        "discount": 0,
+        "date": "2022-12-05",
+        "comment": "Wonderful experience"
+    },
+    {
+        "id": 18,
+        "idProduct": 1,
+        "idClient": 9,
+        "discount": 0,
+        "date": "2023-07-19"
+    },
+    {
+        "id": 19,
+        "idProduct": 2,
+        "idClient": 6,
+        "discount": 0,
+        "date": "2024-04-28"
+    },
+    {
+        "id": 20,
+        "idProduct": 4,
+        "idClient": 15,
+        "discount": 15,
+        "date": "2023-05-17"
+    },
+    {
+        "id": 21,
+        "idProduct": 3,
+        "idClient": 8,
+        "discount": 0,
+        "date": "2022-11-20",
+        "comment": ""
+    },
+    {
+        "id": 22,
+        "idProduct": 2,
+        "idClient": 10,
+        "discount": 0,
+        "date": "2023-04-12",
+        "comment": ""
+    },
+    {
+        "id": 23,
+        "idProduct": 4,
+        "idClient": 13,
+        "discount": 20,
+        "date": "2023-06-30",
+        "comment": "Highly recommended"
+    },
+    {
+        "id": 24,
+        "idProduct": 1,
+        "idClient": 16,
+        "discount": 0,
+        "date": "2023-10-05",
+        "comment": ""
+    },
+    {
+        "id": 25,
+        "idProduct": 5,
+        "idClient": 11,
+        "discount": 0,
+        "date": "2023-12-18",
+        "comment": ""
+    },
+    {
+        "id": 26,
+        "idProduct": 3,
+        "idClient": 14,
+        "discount": 5,
+        "date": "2024-01-02",
+        "comment": "Good service"
+    },
+    {
+        "id": 27,
+        "idProduct": 1,
+        "idClient": 3,
+        "discount": 0,
+        "date": "2024-04-15",
+        "comment": ""
+    },
+    {
+        "id": 28,
+        "idProduct": 4,
+        "idClient": 17,
+        "discount": 10,
+        "date": "2022-09-28",
+        "comment": ""
+    },
+    {
+        "id": 29,
+        "idProduct": 2,
+        "idClient": 12,
+        "discount": 0,
+        "date": "2023-02-14",
+        "comment": ""
+    },
+    {
+        "id": 30,
+        "idProduct": 5,
+        "idClient": 6,
+        "discount": 0,
+        "date": "2024-07-22",
+        "comment": ""
+    },
+    {
+        "id": 31,
+        "idProduct": 1,
+        "idClient": 18,
+        "discount": 0,
+        "date": "2024-10-30",
+        "comment": ""
+    },
+    {
+        "id": 32,
+        "idProduct": 3,
+        "idClient": 4,
+        "discount": 15,
+        "date": "2023-03-08",
+        "comment": "Excellent experience"
+    },
+    {
+        "id": 33,
+        "idProduct": 5,
+        "idClient": 13,
+        "discount": 0,
+        "date": "2022-05-19",
+        "comment": ""
+    },
+    {
+        "id": 34,
+        "idProduct": 2,
+        "idClient": 15,
+        "discount": 0,
+        "date": "2023-08-25",
+        "comment": ""
+    },
+    {
+        "id": 35,
+        "idProduct": 4,
+        "idClient": 7,
+        "discount": 0,
+        "date": "2024-02-03",
+        "comment": ""
+    },
+    {
+        "id": 36,
+        "idProduct": 1,
+        "idClient": 22,
+        "discount": 10,
+        "date": "2022-07-01"
+    },
+    {
+        "id": 37,
+        "idProduct": 3,
+        "idClient": 29,
+        "discount": 10,
+        "date": "2023-02-14",
+        "comment": "Great service"
+    },
+    {
+        "id": 38,
+        "idProduct": 5,
+        "idClient": 36,
+        "discount": 5,
+        "date": "2023-09-27",
+        "comment": "Satisfied customer"
+    },
+    {
+        "id": 39,
+        "idProduct": 2,
+        "idClient": 43,
+        "discount": 15,
+        "date": "2024-01-10",
+        "comment": "Relaxing experience"
+    },
+    {
+        "id": 40,
+        "idProduct": 4,
+        "idClient": 40,
+        "discount": 15,
+        "date": "2024-03-06",
+        "comment": "Excellent massage"
+    },
+    {
+        "id": 41,
+        "idProduct": 3,
+        "idClient": 34,
+        "discount": 0,
+        "date": "2022-11-15",
+        "comment": "Very professional staff"
+    },
+    {
+        "id": 42,
+        "idProduct": 1,
+        "idClient": 23,
+        "discount": 0,
+        "date": "2023-04-07",
+        "comment": "Friendly atmosphere"
+    },
+    {
+        "id": 43,
+        "idProduct": 5,
+        "idClient": 25,
+        "discount": 20,
+        "date": "2023-06-25",
+        "comment": "Quick and efficient service"
+    },
+    {
+        "id": 44,
+        "idProduct": 1,
+        "idClient": 32,
+        "discount": 10,
+        "date": "2023-10-01",
+        "comment": "Highly recommended"
+    },
+    {
+        "id": 45,
+        "idProduct": 4,
+        "idClient": 39,
+        "discount": 0,
+        "date": "2023-12-14",
+        "comment": "Fantastic experience"
+    },
+    {
+        "id": 46,
+        "idProduct": 2,
+        "idClient": 28,
+        "discount": 0,
+        "date": "2024-02-18",
+        "comment": "Great value for money"
+    },
+    {
+        "id": 47,
+        "idProduct": 3,
+        "idClient": 21,
+        "discount": 20,
+        "date": "2024-05-13"
+    },
+    {
+        "id": 48,
+        "idProduct": 5,
+        "idClient": 19,
+        "discount": 0,
+        "date": "2022-12-10",
+        "comment": "Wonderful experience"
+    },
+    {
+        "id": 49,
+        "idProduct": 1,
+        "idClient": 26,
+        "discount": 100,
+        "date": "2023-07-15"
+    },
+    {
+        "id": 50,
+        "idProduct": 4,
+        "idClient": 33,
+        "discount": 13,
+        "date": "2024-04-24"
+    }
+]
